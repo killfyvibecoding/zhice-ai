@@ -1,0 +1,13 @@
+Zhice AI
+Copyright 2026 killfyvibecoding and contributors for modifications made in this repository.
+
+This repository is an independently branded and modified derivative of the Apache-2.0
+project originally published as LingyiChen-AI/JadeAI:
+https://github.com/LingyiChen-AI/JadeAI
+
+The upstream license and attribution requirements remain applicable to the portions
+derived from that project. See LICENSE for the full Apache License 2.0 text.
+
+Zhice AI includes additional modifications to the product identity, server-side
+Mini Program integration, AI safety and routing logic, document workflows, and the
+dark responsive web theme.
