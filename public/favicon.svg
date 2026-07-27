@@ -1,11 +1,12 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="zhice-mark" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#18382D"/>
-      <stop offset="1" stop-color="#5ED29C"/>
+    <linearGradient id="zhice-mark-v2" x1="5" y1="27" x2="27" y2="5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5ED29C"/>
+      <stop offset="1" stop-color="#D7FFF0"/>
     </linearGradient>
   </defs>
-  <rect x="1" y="1" width="30" height="30" rx="8" fill="#070B0A" stroke="#5ED29C" stroke-opacity=".35"/>
-  <path d="M8 10H24L9 22H24" stroke="url(#zhice-mark)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="24" cy="8" r="1.6" fill="#5ED29C"/>
+  <rect x="1" y="1" width="30" height="30" rx="10" fill="#0B1713" stroke="#5ED29C" stroke-opacity=".45"/>
+  <path d="M8 23L15.5 8L19 17H25" stroke="url(#zhice-mark-v2)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="8" cy="23" r="1.8" fill="#5ED29C"/>
+  <circle cx="25" cy="17" r="1.8" fill="#D7FFF0"/>
 </svg>

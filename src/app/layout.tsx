@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: `${appName} - AI Resume Builder`,
   description: 'AI-powered intelligent resume builder with drag-and-drop editor',
   icons: {
-    icon: '/favicon.svg',
+    icon: [{ url: '/favicon.svg?v=2', type: 'image/svg+xml' }],
   },
 };
 
