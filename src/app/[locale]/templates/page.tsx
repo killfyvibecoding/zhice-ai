@@ -13,8 +13,10 @@ import {
 import { TEMPLATES } from '@/lib/constants';
 import { useResume } from '@/hooks/use-resume';
 import { Link, useRouter } from '@/i18n/routing';
-import { useFingerprint } from '@/hooks/use-fingerprint';
-import { ResumePreview } from '@/components/preview/resume-preview';
+import {
+  DynamicResumePreview,
+  LazyTemplatePreview,
+} from '@/components/templates/lazy-template-preview';
 import { TourOverlay, type TourStepConfig } from '@/components/tour/tour-overlay';
 import { useTourStore, hasCompletedTour } from '@/stores/tour-store';
 import { templateLabelsMap as templateLabelKeys } from '@/lib/template-labels';
@@ -226,7 +228,6 @@ export default function TemplatesPage() {
   const t = useTranslations();
   const router = useRouter();
   const { createResume } = useResume();
-  const { fingerprint } = useFingerprint();
   const [previewTemplate, setPreviewTemplate] = useState<string | null>(null);
   const [creatingTemplate, setCreatingTemplate] = useState<string | null>(null);
   const startTour = useTourStore((s) => s.startTour);
@@ -288,17 +289,7 @@ export default function TemplatesPage() {
               </div>
 
               {/* Scaled preview */}
-              <div className="relative h-[320px] overflow-hidden bg-zinc-50 dark:bg-zinc-950">
-                <div
-                  className="absolute left-1/2 top-0 origin-top"
-                  style={{
-                    width: '794px',
-                    transform: 'translateX(-50%) scale(0.28)',
-                  }}
-                >
-                  <ResumePreview resume={mockResume} />
-                </div>
-              </div>
+              <LazyTemplatePreview resume={mockResume} />
 
               {/* Buttons */}
               <div className="flex gap-2 border-t border-zinc-100 px-4 py-3 dark:border-zinc-800">
@@ -350,7 +341,7 @@ export default function TemplatesPage() {
           <div className="flex-1 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {previewTemplate && (
               <div className="mx-auto w-full max-w-[794px] p-6">
-                <ResumePreview resume={buildMockResume(previewTemplate)} />
+                <DynamicResumePreview resume={buildMockResume(previewTemplate)} />
               </div>
             )}
           </div>
