@@ -34,7 +34,7 @@ export function Header() {
           <Link href="/dashboard" className="font-jakarta text-lg font-bold tracking-[-0.04em] text-white">
             职策<span className="text-[#5ed29c]">AI</span>
           </Link>
-          <nav className="hidden items-center gap-1 md:flex">
+          <nav className="flex items-center gap-1 max-md:hidden">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname.startsWith(item.match);
               return (
